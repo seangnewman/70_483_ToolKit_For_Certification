@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "70_483_ToolKit_For_Certification", "70_483_ToolKit_For_Certification\70_483_ToolKit_For_Certification.csproj", "{0D821BE0-68D0-4DB8-B991-6D12EAE202A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeLab", "70_483_ToolKit_For_Certification\CodeLab.csproj", "{0D821BE0-68D0-4DB8-B991-6D12EAE202A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap7_SimpleApp", "Chap7_SimpleApp\Chap7_SimpleApp.csproj", "{EDA6899E-32CF-44A5-8829-1EDA93635672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap7_SimpleApp_WithThreads", "Chap7_SimpleApp_WithThreads\Chap7_SimpleApp_WithThreads.csproj", "{B353E239-69C0-41EF-BC76-816FA6E9F85D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{0D821BE0-68D0-4DB8-B991-6D12EAE202A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D821BE0-68D0-4DB8-B991-6D12EAE202A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D821BE0-68D0-4DB8-B991-6D12EAE202A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA6899E-32CF-44A5-8829-1EDA93635672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA6899E-32CF-44A5-8829-1EDA93635672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA6899E-32CF-44A5-8829-1EDA93635672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA6899E-32CF-44A5-8829-1EDA93635672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B353E239-69C0-41EF-BC76-816FA6E9F85D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B353E239-69C0-41EF-BC76-816FA6E9F85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B353E239-69C0-41EF-BC76-816FA6E9F85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B353E239-69C0-41EF-BC76-816FA6E9F85D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
