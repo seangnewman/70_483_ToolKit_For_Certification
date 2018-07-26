@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap7_SimpleApp", "Chap7_Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap7_SimpleApp_WithThreads", "Chap7_SimpleApp_WithThreads\Chap7_SimpleApp_WithThreads.csproj", "{B353E239-69C0-41EF-BC76-816FA6E9F85D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap7_Run_in_Threadpool", "Chap7_Run_in_Threadpool\Chap7_Run_in_Threadpool.csproj", "{5E224E89-D2ED-4377-B475-024A37598E65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap7_Threading_with_WindowsForms_BackgroundWork", "Chap7_Threading_with_BackgroundWork\Chap7_Threading_with_WindowsForms_BackgroundWork.csproj", "{2E5E6501-B95D-4FE4-9CCB-62B399DDCF7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap7_Threading_with_WPF_BackgroundWork", "Chap7_Threading_with_WPF_BackgroundWork\Chap7_Threading_with_WPF_BackgroundWork.csproj", "{317FDD3E-FE5D-4BAD-8C24-52172C09171D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{B353E239-69C0-41EF-BC76-816FA6E9F85D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B353E239-69C0-41EF-BC76-816FA6E9F85D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B353E239-69C0-41EF-BC76-816FA6E9F85D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E224E89-D2ED-4377-B475-024A37598E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E224E89-D2ED-4377-B475-024A37598E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E224E89-D2ED-4377-B475-024A37598E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E224E89-D2ED-4377-B475-024A37598E65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E5E6501-B95D-4FE4-9CCB-62B399DDCF7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E5E6501-B95D-4FE4-9CCB-62B399DDCF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E5E6501-B95D-4FE4-9CCB-62B399DDCF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E5E6501-B95D-4FE4-9CCB-62B399DDCF7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{317FDD3E-FE5D-4BAD-8C24-52172C09171D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317FDD3E-FE5D-4BAD-8C24-52172C09171D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317FDD3E-FE5D-4BAD-8C24-52172C09171D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317FDD3E-FE5D-4BAD-8C24-52172C09171D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

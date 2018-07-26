@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics;
 
-
-namespace Chap7_SimpleApp_WithThreads
+namespace Chap7_Run_in_Threadpool
 {
     class Program
     {
@@ -17,7 +17,7 @@ namespace Chap7_SimpleApp_WithThreads
 
             //Here we call different methods
             //For different ways of ways of running our application
-            RunWithThreads();
+            RunWithThreadPool();
 
             //Print the time it took to run the application
             Console.WriteLine("We're done in {0} ms!", sw.ElapsedMilliseconds);
@@ -26,37 +26,40 @@ namespace Chap7_SimpleApp_WithThreads
                 Console.Write("Press any key to continue...");
                 Console.ReadKey(true);
             }
+
         }
 
-        
-
-        static void RunWithThreads()
+        static void RunWithThreadPool()
         {
             double result = 0d;
+            //Create a work item to read from I/O
 
-            //Create the thread to read from I/O
-            var thread = new Thread(() => result = ReadDataFromIO());
+            //QueueUserWorkItem places work item on queue
+            ThreadPool.QueueUserWorkItem((x) => {
+                result += ReadDataFromIO();   
+            });
 
-            //start the thread
-            thread.Start();
-
-            //Save the result of the calculation into another variable
+            //Save the result from the calculation into another variable
             double result2 = DoIntensiveCalculations();
+            //Wait for the thread to finish
 
-            // Wait for the thread to finish
-            thread.Join();
+            //TODO : We will need a way to indicate
+            //when the thread pool thread finished the execution
 
-            // Calculate the end result
+            //calculate the end result
             result += result2;
 
             //Print the result
             Console.WriteLine("The result is {0}", result);
-        }
 
+        }
         static double ReadDataFromIO()
         {
             // We are simulating an I/O by putting the current thread to sleep
-            Thread.Sleep(50);
+
+            //Note that if sleep time exceeds the time DoIntensiveCalculation runs, an incorrect value is returned
+            // because there is no mechanism in ThreadPools to signal when the other thread from pool has finished
+            Thread.Sleep(200);
             return 10d;
 
         }
