@@ -1,36 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
-using System.Diagnostics;
+using System.Threading.Tasks;
 
-namespace        static void RunWithThreadPool()
-{
-    double result = 0d;
-    //Create a work item to read from I/O
-
-    //QueueUserWorkItem places work item on queue
-    ThreadPool.QueueUserWorkItem((x) => {
-        result += ReadDataFromIO();
-    });
-
-    //Save the result from the calculation into another variable
-    double result2 = DoIntensiveCalculations();
-    //Wait for the thread to finish
-
-    //TODO : We will need a way to indicate
-    //when the thread pool thread finished the execution
-
-    //calculate the end result
-    result += result2;
-
-    //Print the result
-    Console.WriteLine("The result is {0}", result);
-
-}
-Run_in_Threadpool
+namespace Chap7_RunThreadPoolWithEvents
 {
     class Program
     {
@@ -41,7 +17,7 @@ Run_in_Threadpool
 
             //Here we call different methods
             //For different ways of ways of running our application
-            RunWithThreadPool();
+            RunInThreadPoolWithEvents();
 
             //Print the time it took to run the application
             Console.WriteLine("We're done in {0} ms!", sw.ElapsedMilliseconds);
@@ -53,6 +29,39 @@ Run_in_Threadpool
 
         }
 
+        static void RunInThreadPoolWithEvents()
+        {
+            double result = 0d;
+
+            //We use this event to signal when the thread is done executing
+            EventWaitHandle calculationDone =
+                new EventWaitHandle(false, EventResetMode.ManualReset);   //Non signaled specified by false
+
+
+
+            //Create a work item to read from I/O
+
+            //QueueUserWorkItem places work item on queue
+            ThreadPool.QueueUserWorkItem((x) => {
+                result += ReadDataFromIO();
+                calculationDone.Set();                                //Signal that the work has completed
+            });
+
+            //Save the result from the calculation into another variable
+            double result2 = DoIntensiveCalculations();
+            //Wait for the thread to finish
+
+            //TODO : We will need a way to indicate
+            //when the thread pool thread finished the execution
+            calculationDone.WaitOne();   //Wait for signal to be returned
+
+            //calculate the end result
+            result += result2;
+
+            //Print the result
+            Console.WriteLine("The result is {0}", result);
+
+        }
         static void RunWithThreadPool()
         {
             double result = 0d;
@@ -60,7 +69,7 @@ Run_in_Threadpool
 
             //QueueUserWorkItem places work item on queue
             ThreadPool.QueueUserWorkItem((x) => {
-                result += ReadDataFromIO();   
+                result += ReadDataFromIO();
             });
 
             //Save the result from the calculation into another variable
@@ -104,3 +113,6 @@ Run_in_Threadpool
         }
     }
 }
+
+
+ 
