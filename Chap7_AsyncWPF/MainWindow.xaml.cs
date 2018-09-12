@@ -28,7 +28,7 @@ namespace Chap7_AsyncWPF
 
         private void btnRun_Click(object sender, RoutedEventArgs e)
         {
-            GetDataAsync();
+             GetDataAsync();
         }
 
         private void GetData()

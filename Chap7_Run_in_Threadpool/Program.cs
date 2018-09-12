@@ -6,30 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics;
 
-namespace        static void RunWithThreadPool()
-{
-    double result = 0d;
-    //Create a work item to read from I/O
-
-    //QueueUserWorkItem places work item on queue
-    ThreadPool.QueueUserWorkItem((x) => {
-        result += ReadDataFromIO();
-    });
-
-    //Save the result from the calculation into another variable
-    double result2 = DoIntensiveCalculations();
-    //Wait for the thread to finish
-
-    //TODO : We will need a way to indicate
-    //when the thread pool thread finished the execution
-
-    //calculate the end result
-    result += result2;
-
-    //Print the result
-    Console.WriteLine("The result is {0}", result);
-
-}
+namespace 
 Run_in_Threadpool
 {
     class Program
