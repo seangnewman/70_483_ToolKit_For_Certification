@@ -9,6 +9,15 @@ namespace Chap3_using_properties
     class Student
     {
 
+        public Student()
+        {
+
+        }
+        public Student(string firstName, string lastName)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
         private string firstName;
 
         public string FirstName

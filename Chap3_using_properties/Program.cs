@@ -10,6 +10,15 @@ namespace Chap3_using_properties
     {
         static void Main(string[] args)
         {
+
+
+            Student myStudent = new Student("Tom", "Thumb");
+            myStudent.MiddleInitial = 'R';
+            myStudent.Age = 15;
+            myStudent.GPA = 3.5;
+            myStudent.displayDetails();
+
+
             Student newStudent = new Student();
             newStudent.FirstName = "Larry";
             newStudent.MiddleInitial = 'O';
