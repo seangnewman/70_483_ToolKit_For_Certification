@@ -1,0 +1,9 @@
+﻿<Application x:Class="Chap5_Inheriting_from_BaseClass.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Chap5_Inheriting_from_BaseClass"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
