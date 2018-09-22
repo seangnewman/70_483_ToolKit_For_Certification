@@ -42,5 +42,10 @@ namespace Chap5_ComparingCars
 
 
         }
+
+        public int Compare(object x, object y)
+        {
+            return this.Compare(x as Cars, y as Cars);
+        }
     }
 }

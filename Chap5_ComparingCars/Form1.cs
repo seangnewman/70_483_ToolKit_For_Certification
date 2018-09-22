@@ -37,6 +37,41 @@ namespace Chap5_ComparingCars
 
         private void DisplayCars(Cars[] cars, ListView listView)
         {
+
+            if(cars == null)
+            {
+                return;
+            }
+
+            // Make the appropriate compare
+            CarComparer comparer = new CarComparer();
+
+            if(sortByComboBox.Text == "Name")
+            {
+                comparer.SortBy = CarComparer.CompareField.Name;
+            }else if(sortByComboBox.Text == "Max MPH")
+            {
+                comparer.SortBy = CarComparer.CompareField.MaxMph;
+            }else if(sortByComboBox.Text == "Horsepower")
+            {
+                comparer.SortBy = CarComparer.CompareField.Horsepower;
+            }
+            else
+            {
+                comparer.SortBy = CarComparer.CompareField.Price;
+            }
+
+            // sort
+            Array.Sort(cars, comparer);
+
+            // If not sorting by name, reverse the array
+            if(sortByComboBox.Text != "Name")
+            {
+                Array.Reverse(cars);
+            }
+
+
+
             listView.Items.Clear();
 
             foreach(Cars car in cars)
@@ -52,6 +87,11 @@ namespace Chap5_ComparingCars
             {
                 header.Width = -2;
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
