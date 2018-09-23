@@ -32,6 +32,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.createButton = new System.Windows.Forms.Button();
             this.createAndDispose = new System.Windows.Forms.Button();
+            this.collectGarbageButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createAndDisposeButton
@@ -71,11 +72,22 @@
             this.createAndDispose.Text = "Create And Dispose";
             this.createAndDispose.UseVisualStyleBackColor = true;
             // 
+            // collectGarbageButton
+            // 
+            this.collectGarbageButton.Location = new System.Drawing.Point(23, 149);
+            this.collectGarbageButton.Name = "collectGarbageButton";
+            this.collectGarbageButton.Size = new System.Drawing.Size(153, 23);
+            this.collectGarbageButton.TabIndex = 4;
+            this.collectGarbageButton.Text = "Collect Garbage";
+            this.collectGarbageButton.UseVisualStyleBackColor = true;
+            this.collectGarbageButton.Click += new System.EventHandler(this.collectGarbageButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(369, 261);
+            this.Controls.Add(this.collectGarbageButton);
             this.Controls.Add(this.createAndDispose);
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.listBox1);
@@ -92,6 +104,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Button createAndDispose;
+        private System.Windows.Forms.Button collectGarbageButton;
     }
 }
 

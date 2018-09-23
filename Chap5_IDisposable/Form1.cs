@@ -23,13 +23,12 @@ namespace Chap5_IDisposable
         {
             listBox1.Items.Clear();
 
-            //Make an object
-            DisposableClass obj = new DisposableClass();
-            obj.Name = String.Format("CreateAndDispose {0}", ObjectNumber.ToString());
-            ObjectNumber++;
+            using (DisposableClass obj = new DisposableClass())
+            {
+                obj.Name = String.Format("CreateAndDispose {0}", ObjectNumber.ToString());
+                ObjectNumber++;
 
-            //Dispose of object
-            obj.Dispose();
+            }
 
         }
 
@@ -40,6 +39,11 @@ namespace Chap5_IDisposable
             obj.Name = String.Format("Create {0}", ObjectNumber.ToString());
             ObjectNumber++;
 
+        }
+
+        private void collectGarbageButton_Click(object sender, EventArgs e)
+        {
+            GC.Collect();
         }
     }
 }

@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap5_IEnumerableTree", "Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap5_IDisposable", "Chap5_IDisposable\Chap5_IDisposable.csproj", "{98F8FFA7-8C2E-4B7C-8897-DD27FB9077F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap8_Assembly", "Chap8_Assembly\Chap8_Assembly.csproj", "{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -291,6 +293,10 @@ Global
 		{98F8FFA7-8C2E-4B7C-8897-DD27FB9077F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98F8FFA7-8C2E-4B7C-8897-DD27FB9077F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98F8FFA7-8C2E-4B7C-8897-DD27FB9077F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
