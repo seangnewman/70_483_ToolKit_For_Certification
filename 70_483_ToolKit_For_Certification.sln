@@ -99,6 +99,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap5_IDisposable", "Chap5_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap8_Assembly", "Chap8_Assembly\Chap8_Assembly.csproj", "{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap8_Read_Attributes", "Chap8_Read_Attributes\Chap8_Read_Attributes.csproj", "{302AD355-FE41-402D-A101-D0D04EC675FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap8_Create_Attributes", "Chap8_Create_Attributes\Chap8_Create_Attributes.csproj", "{806C085B-B9B5-40C2-9BF2-D681E80B6FB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -297,6 +301,14 @@ Global
 		{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3179344C-4A41-42FC-99C2-F4D6ABAD4AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{302AD355-FE41-402D-A101-D0D04EC675FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{302AD355-FE41-402D-A101-D0D04EC675FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{302AD355-FE41-402D-A101-D0D04EC675FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{302AD355-FE41-402D-A101-D0D04EC675FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{806C085B-B9B5-40C2-9BF2-D681E80B6FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{806C085B-B9B5-40C2-9BF2-D681E80B6FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{806C085B-B9B5-40C2-9BF2-D681E80B6FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{806C085B-B9B5-40C2-9BF2-D681E80B6FB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
