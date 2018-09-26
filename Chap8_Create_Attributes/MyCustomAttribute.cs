@@ -21,4 +21,6 @@ namespace Chap8_Create_Attributes
         public string Property2 { get; set; }
         public MyCustomAttributeEnum Property3 { get; set; }
     }
+
+
 }

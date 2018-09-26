@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,5 +20,9 @@ namespace Chap8_Create_Attributes
             Debug.WriteLine(string.Format("Property2: {0}", attribute.Property2));
             Debug.WriteLine(string.Format("Property3: {0}", attribute.Property3));
         }
+
+        
+
+
     }
 }
